@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mille Merci - Galletas artesanales</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="images/logo_millemerci_head.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo_millemerci_head.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Contenedor para cargar la barra de menú usando JavaScript -->
+    <div id="menu"> </div>
+
+    <!-- Contenido de la página - Inicio -->
+
+
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4 text-brown" style="font-family: 'Titan One', cursive;">
+                    Pago Seguro
+                </h2>
+
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body text-center py-2">
+                        <h5 class="mb-0 text-brown">
+                            Valor a cancelar: <span id="valorTotal"></span>
+                        </h5>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-3">
+
+                    <div class="input-group border rounded p-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="metodoPago" id="credito" value="credito"
+                                checked>
+                            <label class="form-check-label" for="credito">Tarjeta de crédito</label>
+                        </div>
+                        <div class="ms-auto d-flex align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="images/visa.png" alt="Visa" class="img-fluid me-2"
+                                    style="width:50px; height:30px; object-fit:contain;">
+                                <img src="images/mastercard.png" alt="MasterCard" class="img-fluid me-2"
+                                    style="width:50px; height:30px; object-fit:contain;">
+                                <img src="images/amex.png" alt="Amex" class="img-fluid me-2"
+                                    style="width:50px; height:30px; object-fit:contain;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card shadow">
+                    <div class="card-body">
+
+
+                        <form id="formPago">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre en la tarjeta</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="numero" class="form-label">Número de tarjeta</label>
+                                <input type="text" class="form-control" id="numero" maxlength="16" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 mb-3">
+                                    <label for="vencimiento" class="form-label">Fecha de vencimiento</label>
+                                    <input type="text" class="form-control" id="vencimiento" maxlength="5"
+                                        placeholder="MM/AA" required>
+                                    <div class="invalid-feedback">⚠️ Fecha inválida.</div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="cvv" class="form-label">CVV</label>
+                                    <input type="password" class="form-control" id="cvv" maxlength="4" required>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn w-100 bg-yellow" style="color:white;">
+                                Realizar Pago
+                            </button>
+                        </form>
+                        <p class="text-center mt-3 fw-bold text-success" id="mensaje"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">¡Tu pago ha sido realizado con éxito! ✅</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    En breve recibiras un mensaje con toda la información de tu pedido. <br> <br>
+                    ¡Gracias por tu compra! 🍪
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="window.location.href='index.html'">
+                        Aceptar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido de la página - Final -->
+
+    <!-- Contenedor para cargar el pie de página usando JavaScript -->
+    <div id="pie"> </div>
+
+
+
+    <!-- Start Script -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/templatemo.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- End Script -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            cargarFragmento("menu", "menu.html");
+            cargarFragmento("pie", "pie.html");
+        }); 
+    </script>
+
+    <!-- Confirmación del pago -->
+    <script>
+        const formPago = document.getElementById('formPago');
+
+        formPago.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Mostrar modal de confirmación
+            const modal = new bootstrap.Modal(document.getElementById('modalConfirmacion'));
+            modal.show();
+
+            // Limpiar formulario después
+            formPago.reset();
+        });
+    </script>
+
+    <!-- script para campo de fecha de vencimiento-->
+
+    <script>
+        const vencimiento = document.getElementById('vencimiento');
+
+        vencimiento.addEventListener('input', function (e) {
+            let valor = e.target.value.replace(/\D/g, ""); // Solo dígitos
+            if (valor.length > 4) valor = valor.slice(0, 4); // Máx. 4 dígitos (MMYY)
+
+            if (valor.length > 2) {
+                e.target.value = valor.slice(0, 2) + "/" + valor.slice(2);
+            } else {
+                e.target.value = valor;
+            }
+        });
+
+        // Validación al perder foco
+        vencimiento.addEventListener('blur', function (e) {
+            const valor = e.target.value;
+            const regex = /^(\d{2})\/(\d{2})$/;  // Formato MM/AA
+            const feedback = e.target.nextElementSibling;
+
+            if (!regex.test(valor)) {
+                e.target.classList.add("is-invalid");
+                return;
+            }
+
+            let [, mes, año] = valor.match(regex);
+            mes = parseInt(mes, 10);
+            año = parseInt(año, 10);
+
+            // Año actual en formato 2 dígitos
+            const fechaActual = new Date();
+            const mesActual = fechaActual.getMonth() + 1; // 0-index → +1
+            const añoActual = parseInt(fechaActual.getFullYear().toString().slice(-2));
+
+            if (mes < 1 || mes > 12) {
+                e.target.classList.add("is-invalid");
+                return;
+            }
+
+            // Comparar fecha ingresada con fecha actual
+            if (año < añoActual || (año === añoActual && mes < mesActual)) {
+                e.target.classList.add("is-invalid");
+                return;
+            }
+
+            // Si todo está bien
+            e.target.classList.remove("is-invalid");
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let total = localStorage.getItem("totalPagar") || 0;
+            document.getElementById("valorTotal").textContent =
+                `$${parseInt(total).toLocaleString("es-CO")}`;
+        });
+    </script>
+
+
+
+</body>
+
+</html>

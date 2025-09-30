@@ -1,0 +1,105 @@
+/*
+Custom Css
+*/
+.navbar-brand {
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text-light {
+  color: #FFF8F0 !important; /* gris claro */
+}
+
+.titulo-seccion {
+  font-size: 1.8rem;  /* más pequeño que el h1 por defecto (~2.5rem) */
+  font-weight: 700;   /* mantiene fuerza en el texto */
+  color: #333;        /* opcional para dar uniformidad */
+}
+
+/* Colores Mille Merci */
+.text-brown { color: #6F4E37 !important; }    /* Logo / títulos */
+.text-choco { color: #d2691e;}
+.text-yellow { color: #b98e00;}
+.bg-choco { background-color: #d2691e;}
+.bg-brown { background-color: #473426 !important; }    /* Logo / títulos */
+.bg-yellow { background-color: #b98e00;}
+.bg-caramel { background-color: #CFAF70;}
+.bg-rosado { background-color: #f8d7da;}
+.bg-footer { background-color: #36281d !important; }
+.bg-beige   { background-color: #F5F5DC; }    /* Fondo general */
+.bg-cream   { background-color: #FFF8F0; }    /* Fondo de secciones */
+.text-caramel { color: #D2B48C; }             /* Textos/acento */
+.text-gold  { color: #CFAF70; }               /* Resaltados elegantes */
+
+/* Ejemplo botones */
+.btn-caramel {
+    background-color: #D2B48C;
+    color: #473426;
+    border: none;
+}
+.btn-caramel:hover {
+    background-color: #CFAF70;
+    color: #FFF8F0;
+}
+
+.btn-choco {
+    background-color: #d2691e;
+    color: #FFF8F0;
+    border: none;
+}
+.btn-choco:hover {
+    background-color: #b98e00;
+    color: #F5F5DC;
+    transform: scale(1.03);
+}
+
+.btn-green {
+  background-color: #b98e00;
+  color: #f8d7da;
+  border: none;
+}
+.btn-green:hover {
+  background-color: #198754;
+  color: #F5F5DC;
+  transform: scale(1.03);
+}
+
+
+
+.border-cream {
+  border-bottom: 1px solid #FFF8F0 !important;
+}
+
+
+
+/* Toast estilo Mille Merci */
+.toast-mm {
+  visibility: hidden;
+  min-width: 300px;
+  margin: auto;
+  background-color: #6F4E37;   /* Café moka */
+  color: #FFF8F0;              /* Crema suave */
+  text-align: center;
+  border-radius: 10px;
+  padding: 14px 20px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  z-index: 1050;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+  opacity: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+  border: 2px solid #CFAF70;   /* Dorado elegante */
+}
+
+/* Estado visible */
+.toast-mm.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+
