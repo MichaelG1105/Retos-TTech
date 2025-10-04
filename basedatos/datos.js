@@ -4,7 +4,7 @@ const elementos_carrusel = [
     {
         nombre: "Galletas artesanales",
         descripcion: "Galletas artesanales, de gran tamaño, suaves por dentro y crujientes por fuera, hechas para disfrutar en cualquier momento. Modernas, únicas y llenas de sabor.",
-        imagen: "images/galletas_chocolate_chips-remove_.png"
+        imagen: "images/galleta_chocolate_alta.png"
     },
     {
         nombre: "Galletas de temporada",
@@ -50,8 +50,9 @@ const lista_productos = [
         descripcion: "Deliciosas y elegantes galletas de chocolate",
         codigo_categoria: "100",
         imagen: "images/galletas_chocolate.png",
-        precio: 5000,
-        calificacion: 5
+        precio: 8000,
+        calificacion: 5,
+        detalles: "Crujientes por fuera, suavecitas por dentro. Ingredientes de calidad"
 
     },
     {
@@ -60,18 +61,20 @@ const lista_productos = [
         descripcion: "Sorprende a tus seres queridos en tus fechas especiales",
         codigo_categoria: "200",
         imagen: "images/galletas_hallowen_categorias.jpg",
-        precio: 8000,
-        calificacion: 5
+        precio: 12000,
+        calificacion: 5,
+        detalles: "Galletas decoradas por temporada para sorprender a tus amigos y familiares"
 
     },
     {
         codigo: "003",
-        nombre: "Clásicas figuras",
+        nombre: "Clásicas figuras x 10",
         descripcion: "Las galletas de toda la vida con un sabor inigualable",
         codigo_categoria: "300",
         imagen: "images/galletas_figuras.png",
-        precio: 4000,
-        calificacion: 5
+        precio: 8000,
+        calificacion: 5,
+        detalles: "Las de toda la vida con un sabor y calidad inigualable"
 
     },
     {
@@ -80,8 +83,9 @@ const lista_productos = [
         descripcion: "Deliciosas y elegantes galletas Red Velvet",
         codigo_categoria: "100",
         imagen: "images/galletas_redvelvet2.jpg",
-        precio: 4000,
-        calificacion: 5
+        precio: 8000,
+        calificacion: 5,
+        detalles: "Crujientes por fuera, suavecitas por dentro. Ingredientes de calidad"
 
     },
     {
@@ -90,48 +94,53 @@ const lista_productos = [
         descripcion: "Espectacular galleta de Nutella",
         codigo_categoria: "100",
         imagen: "images/galletas_nutella.jpg",
-        precio: 4000,
-        calificacion: 5
+        precio: 12000,
+        calificacion: 5,
+        detalles: "Crujientes por fuera, suavecitas por dentro. Ingredientes de calidad"
 
     },
     {
         codigo: "006",
         nombre: "Avena con chips",
-        descripcion: "Las galletas de toda la vida con un sabor inigualable",
+        descripcion: "Saludables y deliciosas",
         codigo_categoria: "300",
         imagen: "images/galletas_avena_redim.jpg",
-        precio: 4000,
-        calificacion: 5
+        precio: 10000,
+        calificacion: 5,
+        detalles: "Galletas de avena con chocolate de calidad. Saludables y deliciosas"
 
     },
     {
         codigo: "007",
-        nombre: "Galletas Navidad",
+        nombre: "Navidad",
         descripcion: "Sorprende a tus seres queridos en tus fechas especiales",
         codigo_categoria: "200",
         imagen: "images/galletas_navidad.png",
-        precio: 4000,
-        calificacion: 5
+        precio: 12000,
+        calificacion: 5,
+        detalles: "Galletas decoradas por temporada para sorprender a tus amigos y familiares"
 
     },
     {
         codigo: "008",
-        nombre: "Muffins de queso",
+        nombre: "Muffins de queso x 4",
         descripcion: "Espectacular muffin de queso",
         codigo_categoria: "400",
         imagen: "images/muffin_queso_redim.jpg",
-        precio: 4000,
-        calificacion: 5
+        precio: 16000,
+        calificacion: 5,
+        detalles: "Espectaculares muffins de queso, vas a querer repetir una y otra vez"
 
     },
     {
-        codigo: "003",
-        nombre: "Galletas clásicas",
+        codigo: "009",
+        nombre: "Clásicas x 10",
         descripcion: "Las galletas de toda la vida con un sabor inigualable",
         codigo_categoria: "300",
         imagen: "images/clasicas2.png",
-        precio: 4000,
-        calificacion: 5
+        precio: 10000,
+        calificacion: 5,
+        detalles: "Las de toda la vida con un sabor y calidad inigualable"
         
     }
 ]

@@ -37,10 +37,10 @@
         <div class="row">
 
             <div class="col-lg-2">
-                <h1 class="h2 pb-4">Categorias</h1>
+                <h1 class="h2 pb-4 text-brown">Categorias</h1>
                 <ul id="etiqueta_categorias" class="list-unstyled">
                     <li class="pb-3">
-                        <a class="d-flex justify-content-between h3 text-decoration-none" href="productos.html">
+                        <a class="d-flex justify-content-between h3 text-decoration-none text-choco categoria-link" href="productos.html">
                             Mostrar todo
                         </a>
                     </li>
@@ -54,7 +54,7 @@
                     let li = document.createElement("li");
                     li.classList.add("pb-3");
                     li.innerHTML = `
-                        <a class="d-flex justify-content-between h3 text-decoration-none" href="productos.html?categoria=${categoria.codigo}">
+                        <a class="d-flex justify-content-between h3 text-decoration-none text-choco categoria-link" href="productos.html?categoria=${categoria.codigo}">
                         ${categoria.nombre}
                         </a>`;
                     etiqueta_categorias.appendChild(li);
@@ -129,22 +129,15 @@
                         <li class="page-item disabled">
                             <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#"
                                 tabindex="-1">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark"
-                                href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
 
             <!-- Carrito de compras-->
             <div class="col-lg-3 bg-beige p-3">
-                <h3 class="text.dark">Carrito de compras</h3>
-                <p>Valor total: $<b id="etiqueta_total">0</b></p>
+                <h3 class="text-brown">Carrito de compras</h3>
+                <p class="text-brown">Valor total: $<b id="etiqueta_total">0</b></p>
                 <ul id="etiqueta_carrito" class="list-unstyled"></ul>
 
                 <div id="boton-vaciar" class="btn btn-danger text-decoration-none"

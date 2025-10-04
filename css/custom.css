@@ -65,13 +65,18 @@ Custom Css
   transform: scale(1.03);
 }
 
-
-
 .border-cream {
   border-bottom: 1px solid #FFF8F0 !important;
 }
 
+.categoria-link {
+  color: #d2691e; /* color normal (ej: café chocolate) */
+  text-decoration: none;
+}
 
+.categoria-link:hover {
+  color: #198754; /* color hover (ej: canela o naranja cálido) */
+}
 
 /* Toast estilo Mille Merci */
 .toast-mm {
